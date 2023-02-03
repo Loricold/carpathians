@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carpathians</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Open+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Carpathians</h1>
+      <h2>
+        The Carpathian Mountains — the place where you go skiing in winter and
+        hiking in summer. A place you should jump at the chance to visit when
+        the opportunity presents itself.
+      </h2>
+      <img
+        class="mountains"
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/050/344/original/carpathians.png?1666877659"
+        alt="Carpathian mountains"
+      />
+      <p>
+        The Carpathian Mountains or Carpathians are a range of mountains forming
+        an arc across Central Europe. Roughly 1,500 km (930 mi) long, it is the
+        third-longest European mountain range after the Urals at 2,500 km (1,600
+        mi) and the Scandinavian Mountains at 1,700 km (1,100 mi). They provide
+        habitat for the largest European populations of brown bears, wolves,
+        chamois, and lynxes, with the highest concentration in Romania, as well
+        as over one-third of all European plant species. The mountains and their
+        foothills also have many thermal and mineral waters, with Romania having
+        one-third of the European total.
+      </p>
+      <a
+        href="https://en.wikipedia.org/wiki/Carpathian_Mountains"
+        target="_blank"
+        >📖 Read more in Wikipedia</a
+      >
+      <h3>Things to do <span>in Carpathians</span></h3>
+      <ul>
+        <li>
+          <h4>Kayaking</h4>
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/050/346/original/kayaking.jpg?1666877792"
+            alt=""
+          />
+          <p>
+            Kayaking is a portion of adrenaline during the fight against water
+            element and descent on fast mountain rivers.
+          </p>
+        </li>
+        <li>
+          <h4>Hiking</h4>
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/050/345/original/hiking.jpg?1666877699"
+            alt=""
+          />
+          <p>
+            Hiking tours are extremely accessible and safe even for the
+            beginner.
+          </p>
+        </li>
+        <li>
+          <h4>Skiing</h4>
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/050/347/original/skiing.jpg?1666877836"
+            alt=""
+          />
+          <p>
+            With the whole family, as a couple or with friends: Spend your
+            skiing holiday in Carpathians
+          </p>
+        </li>
+      </ul>
+      <button>Plan your trip</button>
+      <p class="footer">
+        This page was built by
+        <a
+          href="https://www.instagram.com/lori_cold/?igshid=YmMyMTA2M2Y%3D"
+          target="_blank"
+          >Alina Nikhotsa</a
+        >
+      </p>
+    </div>
+    <script>
+      function contactUser() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email?");
+        let activity = prompt(
+          "What do you like more: kayaking, hiking or skiing?"
+        );
+        activity = activity
+          .toLowerCase()
+          .trim()
+          .replace("kayaking", "kayak")
+          .replace("hike", "hiking")
+          .replace("skiing", "ski");
+        if (
+          activity === "kayak" ||
+          activity === "hiking" ||
+          activity === "ski"
+        ) {
+          alert(
+            `Nice to meet you, ${name}! We have already sent plan according to your preferences 😊`
+          );
+        } else {
+          alert(`${name}, unfortunately, we don't have such oportunity 😔`);
+        }
+      }
+      let tripButton = document.querySelector("button");
+      tripButton.addEventListener("click", contactUser);
+    </script>
+  </body>
+</html>
